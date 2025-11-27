@@ -291,8 +291,9 @@ def main(ticker):
 
     return df
 
-if __name__ == "__main__":
-    ticker = input("Enter keywords: ")
+#if __name__ == "__main__":
+def call_function(ticker):
+    #ticker = input("Enter keywords: ")
     #main(ticker)
     search_keyword = ticker.strip()
     final_df = main(search_keyword)
@@ -311,6 +312,8 @@ if __name__ == "__main__":
             print(f"\n Saved detailed results to {file_name}")
         except Exception as e :
             print(f"\n Error saving file: {e}")
+    
+    return sentiment_result
 
 #df.to_csv(f'{ticker}_sentiment.csv', index=False)
 #print(f"Saved to {ticker}_sentiment.csv")
