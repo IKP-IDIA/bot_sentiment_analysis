@@ -1,4 +1,5 @@
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI, HTTPException,UploadFile, File
+import fitz  # PyMuPDF
 from pydantic import BaseModel, Field
 from datetime import datetime
 from typing import Optional
@@ -32,6 +33,20 @@ class SentimentData(BaseModel):
     # หมายเหตุ: ไม่รวม news_articles ซึ่งเป็น list of dicts
 
 # 3. API Endpoint
+# Extract text from uploaded PDF
+@app.post("/extract")
+async def extract_pdf(file: UploadFile = File(...)):
+    if not file.filename.endswith(".pdf"):
+        return {"error": "Please upload a PDF file"}
+ 
+    text_content = ""
+    pdf = fitz.open(stream=await file.read(), filetype="pdf")
+    for page in pdf:
+        text_content += page.get_text() + "\n"
+    pdf.close()
+ 
+    return {"content": text_content}
+
 
 @app.post("/api/sentiment")
 async def receive_sentiment_data(data: SentimentData):
