@@ -1,25 +1,23 @@
-from fastapi import FastAPI, HTTPException,UploadFile, File
-import fitz  # PyMuPDF
+from fastapi import FastAPI, HTTPException, UploadFile, File
 from pydantic import BaseModel, Field
 from datetime import datetime
 from typing import Optional
 import logging
-import uvicorn # จำเป็นสำหรับการรัน Server
+import uvicorn
 
-# 1. ตั้งค่า Logging (เพื่อให้เห็นข้อมูลเข้าใน Terminal)
+# 1. ตั้งค่า Logging 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
 app = FastAPI(
-    title="Sentiment Data Receiver API",
-    description="API Endpoint for receiving aggregate sentiment analysis results from the Python script."
+    title="Sentiment Analysis API",
+    description="API for processing keywords and receiving aggregate sentiment results."
 )
 
-# 2. Pydantic Model สำหรับ Payload ที่แก้ไขแล้ว 
-
+# 2. Pydantic Model สำหรับรับผลลัพธ์รวม (Micro-Payload)
 class SentimentData(BaseModel):
     """
-    Schema สำหรับผลลัพธ์รวมเท่านั้น (Micro-Payload)
+    Schema สำหรับผลลัพธ์รวมที่ Client Script จะส่งมาหลังจากวิเคราะห์เสร็จแล้ว
     """
     analysis_id: str = Field(..., description="Unique ID for this analysis run.")
     analysis_date: datetime
@@ -29,37 +27,50 @@ class SentimentData(BaseModel):
     average_sentiment: float = Field(..., ge=-1.0, le=1.0) 
     # Label รวม: Positive, Neutral, หรือ Negative
     overall_label: str
+
+# 3. Pydantic Model สำหรับรับ Keyword ใหม่ (จาก Client Script)
+class KeywordInput(BaseModel):
+    """
+    Schema สำหรับรับ Keyword จาก Client เพื่อจำลองการเริ่มงาน
+    """
+    keyword: str = Field(..., description="The search keyword provided by the user.")
+
+# --- API Endpoints ---
+
+# 📌 NEW: Endpoint สำหรับรับ Keyword จาก Client Script (แทนที่ /extract)
+@app.post("/analyze_keyword")
+async def analyze_keyword(data: KeywordInput):
+    """
+    รับ Keyword จาก Client เพื่อจำลองการเริ่มกระบวนการวิเคราะห์ Sentiment.
+    """
+    logger.info(f"--- 🔑 KEYWORD RECEIVED ---")
+    logger.info(f"Received Keyword: {data.keyword}")
     
-    # หมายเหตุ: ไม่รวม news_articles ซึ่งเป็น list of dicts
+    # 📌 ในการใช้งานจริง:
+    # 1. Server จะเรียกใช้ฟังก์ชัน get_google_news(data.keyword)
+    # 2. ทำการวิเคราะห์ sentiment
+    # 3. บันทึกผลลัพธ์ หรือส่งผลลัพธ์กลับไป
 
-# 3. API Endpoint
-# Extract text from uploaded PDF
-@app.post("/extract")
-async def extract_pdf(file: UploadFile = File(...)):
-    if not file.filename.endswith(".pdf"):
-        return {"error": "Please upload a PDF file"}
- 
-    text_content = ""
-    pdf = fitz.open(stream=await file.read(), filetype="pdf")
-    for page in pdf:
-        text_content += page.get_text() + "\n"
-    pdf.close()
- 
-    return {"content": text_content}
+    # สำหรับการสาธิต: แค่ตอบกลับด้วยข้อมูลที่รับมา
+    return {
+        "status": "processing_started",
+        "message": f"Keyword '{data.keyword}' received and analysis initiated.",
+        "keyword_received": data.keyword,
+        "processed_at": datetime.now().isoformat()
+    }
 
 
+# 📌 EXISTING: Endpoint สำหรับรับผลลัพธ์รวม (Micro-Payload) จาก Python Script
 @app.post("/api/sentiment")
 async def receive_sentiment_data(data: SentimentData):
     """
     รับผลลัพธ์การวิเคราะห์ Sentiment (Micro-Payload) จาก Client
     """
-    logger.info(f"--- 📬 DATA RECEIVED ---")
+    logger.info(f"--- 📬 AGGREGATE DATA RECEIVED ---")
     logger.info(f"Keyword: {data.keyword}")
     logger.info(f"Avg Sentiment: {data.average_sentiment:.4f} ({data.overall_label})")
     
-    # 📌 ในการใช้งานจริง:
-    # 1. เชื่อมต่อฐานข้อมูล (Database)
-    # 2. บันทึกข้อมูล aggregate (data.dict()) ลงในฐานข้อมูล
+    # ในการใช้งานจริง: บันทึก data ลงในฐานข้อมูล
     
     return {
         "status": "success",
@@ -71,11 +82,10 @@ async def receive_sentiment_data(data: SentimentData):
 
 @app.get("/")
 def home():
-    return {"message": "Sentiment Analysis API is running."}
+    return {"message": "Sentiment Analysis API is running. Check /docs for endpoints."}
 
 # --- 4. วิธีการรัน Server ---
 
 if __name__ == "__main__":
-    # ใช้ Uvicorn เพื่อรัน Server
-    # โฮสต์: 127.0.0.1 (Localhost), พอร์ต: 8000
+    # ใช้ Uvicorn เพื่อรัน Server บน Localhost ที่ Port 8000
     uvicorn.run(app, host="127.0.0.1", port=8000)
