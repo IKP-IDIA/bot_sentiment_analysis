@@ -48,11 +48,11 @@ async def analyze_keyword(data: request):
     """
     #logger.info(f"KEYWORD RECEIVED")
     #logger.info(f"Received Keyword: {data.keyword}")
-    data = await request.body()
-    data= json.loads(data)
-    print(data)
-    ticker = data.get("ticker")
-    sentiment_result = google_sentiment.call_function(ticker)
+    # data = await request.body()
+    # data= json.loads(data)
+    # print(data)
+    # ticker = data.get(data.ticker)
+    sentiment_result = google_sentiment.call_function(data.ticker)
     
     # ในการใช้งานจริง:
     # 1. Server จะเรียกใช้ฟังก์ชัน get_google_news(data.keyword)
