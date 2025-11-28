@@ -1,6 +1,6 @@
 import requests
 from bs4 import BeautifulSoup
-from textblob import TextBlob
+# from textblob import TextBlob
 import pandas as pd
 import matplotlib.pyplot as plt
 from datetime import datetime, date
