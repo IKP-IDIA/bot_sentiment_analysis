@@ -36,7 +36,7 @@ class request(BaseModel):
     """
     Schema สำหรับรับ Keyword จาก Client เพื่อจำลองการเริ่มงาน
     """
-    keyword: str = Field(..., description="The search keyword provided by the user.")
+    ticker: str = Field(..., description="The search keyword provided by the user.")
 
 # --- API Endpoints ---
 
