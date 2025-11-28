@@ -52,7 +52,12 @@ async def analyze_keyword(data: request):
     # data= json.loads(data)
     # print(data)
     # ticker = data.get(data.ticker)
-    sentiment_result = google_sentiment.call_function(data.ticker)
+
+
+
+    # sentiment_result = google_sentiment.call_function(data.ticker)
+
+
     
     # ในการใช้งานจริง:
     # 1. Server จะเรียกใช้ฟังก์ชัน get_google_news(data.keyword)
@@ -66,9 +71,12 @@ async def analyze_keyword(data: request):
     #     "keyword_received": data.keyword,
     #     "processed_at": datetime.now().isoformat()
     # }
-    return {"status": "processing_started",
-            "keyword_received": ticker,
-            "result": sentiment_result}
+
+    return {"XXXX":"XXXXX"}
+
+    # return {"status": "processing_started",
+    #         "keyword_received": ticker,
+    #         "result": sentiment_result}
 
 
 # EXISTING: Endpoint สำหรับรับผลลัพธ์รวม (Micro-Payload) จาก Python Script
