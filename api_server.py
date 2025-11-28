@@ -51,7 +51,7 @@ async def analyze_keyword(request: Request):
     data = await request.body()
     data= json.loads(data)
     print(data)
-    ticker = data.get("ticker")
+    ticker = data.get(request.ticker)
     sentiment_result = google_sentiment.call_function(ticker)
     
     # ในการใช้งานจริง:
