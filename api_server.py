@@ -42,7 +42,7 @@ class request(BaseModel):
 
 # NEW: Endpoint สำหรับรับ Keyword จาก Client Script (แทนที่ /extract)
 @app.post("/analyze_keyword")
-async def analyze_keyword(request: Request):
+async def analyze_keyword(data: request):
     """
     รับ Keyword จาก Client เพื่อจำลองการเริ่มกระบวนการวิเคราะห์ Sentiment.
     """
