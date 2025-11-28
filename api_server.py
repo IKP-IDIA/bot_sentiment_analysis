@@ -55,7 +55,7 @@ async def analyze_keyword(data: request):
 
 
 
-    # sentiment_result = google_sentiment.call_function(data.ticker)
+    sentiment_result = google_sentiment.call_function(data.ticker)
 
 
     
@@ -72,11 +72,11 @@ async def analyze_keyword(data: request):
     #     "processed_at": datetime.now().isoformat()
     # }
 
-    return {"XXXX":"XXXXX"}
+    # return {"XXXX":"XXXXX"}
 
-    # return {"status": "processing_started",
-    #         "keyword_received": ticker,
-    #         "result": sentiment_result}
+    return {"status": "processing_started",
+            "keyword_received": data.ticker,
+            "result": sentiment_result}
 
 
 # EXISTING: Endpoint สำหรับรับผลลัพธ์รวม (Micro-Payload) จาก Python Script
@@ -105,4 +105,4 @@ def home():
 
 if __name__ == "__main__":
     # ใช้ Uvicorn เพื่อรัน Server บน Localhost ที่ Port 8000
-    uvicorn.run(app, host="127.0.0.1", port=8000)
+    uvicorn.run(app, host="127.0.0.1", port=8001)

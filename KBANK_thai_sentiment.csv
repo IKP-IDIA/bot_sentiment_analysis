@@ -1,21 +1,21 @@
 date,time,title,sentiment,label,news_num
-25-Nov-25,08:55:16,KBANK ร่วมเวที COP30 ตอกย้ำผู้นำการเงินเพื่อสิ่งแวดล้อม - Thunhoon,0.0,neutral,1
-24-Nov-25,05:44:00,เจาะลึกวิสัยทัศน์ Q Wallet by KBANK ความฝันสังคมไร้เงินสด ที่ปลอดภัยและโปร่งใสกว่าเดิม กับ ดร. กรินทร์ บุญเลิศวณิชย์ - Techsauce,0.0,neutral,2
-26-Nov-25,10:09:55,KBank ร่วมกับ Orbix Technology และ StraitsX เปิดตัว Seamless Travel Payments on Chain - AEC10NEWS,0.0,neutral,3
-24-Nov-25,08:00:00,กสิกรไทยเสริมทัพ แต่งตั้ง 3 ผู้บริหารระดับสูง - Marketeer Online,0.0,neutral,4
-21-Nov-25,08:17:40,KBank ชูภาพอนาคต Digital Money บนเวทีนานาชาติ - Share2Trade,0.0,neutral,5
-21-Nov-25,08:00:00,Save Tax with KBank EP 5: กลัวเสี่ยงแต่ก็ไม่อยากเสียภาษีเยอะ ทำยังไงดี ? - ธนาคารกสิกรไทย,0.050000000000000044,neutral,6
-26-Nov-25,09:52:08,KBank ร่วมกับ Orbix Technology และ StraitsX เปิดตัว Seamless Travel Payments on Chain ภายใต้โครงการ BLOOM ที่งาน Singapore FinTech Festival 2025 - efinanceThai,0.0,neutral,7
-04-Nov-25,08:00:00,ทำไม ‘กสิกรไทย’ ทุ่ม 8.8 พันล้านบาท ซื้อหุ้นคืน อีกครั้ง ในรอบเกือบ 6 ปี - thestandard.co,0.4,positive,8
-26-Nov-25,06:15:12,บัตรเครดิต KBank PLUSTINUM พลัสความคุ้ม กิน-เที่ยว-ช้อป ในงาน THE POWER OF PLUS - Positioning Magazine,0.0,neutral,9
-22-Nov-25,04:11:11,KBANK คาดกรอบเงินบาทสัปดาห์หน้า 32.20-32.80 เกาะติดส่งออกไทย-Flow ต่างชาติ-ราคาทองคำ - สำนักข่าวอินโฟเควสท์,0.0,neutral,10
-26-Nov-25,08:20:28,"KBank, Orbix Technology and StraitsX unveil project “Seamless Travel Payments on Chain” under MAS’s Project BLOOM at Singapore Fintech Festival 2025 - มิติหุ้น",0.0,neutral,11
+28-Nov-25,04:16:24,KBANK คว้าอีก 4 รางวัลใหญ่ ด้านดิจิทัลและความยั่งยืน จากเวที IDC Future Enterprise Awards 2025 ตอกย้ำความเป็นผู้นำองค์กรแห่งอนาคต - มิติหุ้น | ชี้ชัดทุกการลงทุน - มิติหุ้น,0.0,neutral,1
+27-Nov-25,08:33:17,รีวิว บัตรเครดิต KBank PLUSTINUM ดียังไง? สิทธิ์เข้า Lounge ไม่จำกัดสายการบิน และ สิทธิพิเศษที่คนเดินทางต้องชอบ - ธนาคารกสิกรไทย,0.75,positive,2
+25-Nov-25,08:55:16,KBANK ร่วมเวที COP30 ตอกย้ำผู้นำการเงินเพื่อสิ่งแวดล้อม - Thunhoon,0.0,neutral,3
+27-Nov-25,07:13:00,KBank ร่วมกับ Orbix Technology และ StraitsX เปิดตัว Seamless Travel Payments on Chain - ThaiPR.NET,0.0,neutral,4
+24-Nov-25,05:44:00,เจาะลึกวิสัยทัศน์ Q Wallet by KBANK ความฝันสังคมไร้เงินสด ที่ปลอดภัยและโปร่งใสกว่าเดิม กับ ดร. กรินทร์ บุญเลิศวณิชย์ - Techsauce,0.0,neutral,5
+28-Nov-25,03:18:00,กสิกรไทยตอกย้ำความเป็นผู้นำ คว้า 4 รางวัลใหญ่ จาก SET Awards 2025 - newswit,0.0,neutral,6
+27-Nov-25,10:27:38,KBank winning four major awards at the SET Awards 2025 - AEC10NEWS,0.0,neutral,7
+24-Nov-25,08:00:00,กสิกรไทยเสริมทัพ แต่งตั้ง 3 ผู้บริหารระดับสูง - Marketeer Online,0.0,neutral,8
+04-Nov-25,08:00:00,ทำไม ‘กสิกรไทย’ ทุ่ม 8.8 พันล้านบาท ซื้อหุ้นคืน อีกครั้ง ในรอบเกือบ 6 ปี - thestandard.co,0.4,positive,9
+26-Nov-25,10:09:55,KBank ร่วมกับ Orbix Technology และ StraitsX เปิดตัว Seamless Travel Payments on Chain - AEC10NEWS,0.0,neutral,10
+21-Nov-25,08:00:00,KBank ดึงพลังดิจิทัลเทคโนโลยีร่วมสนับสนุนพัฒนา “Digital Platform” กับหน่วยงานระดับประเทศด้าน “การศึกษา-สาธารณสุข-ท่องเที่ยว” - Marketeer Online,0.0,neutral,11
 07-Oct-25,07:00:00,บัตรเครดิตแพลทินัมกสิกรไทย อัปเกรดใหม่เป็น “บัตรเครดิต KBank PLUSTINUM*” พลัสสิทธิพิเศษใหม่ ให้ลูกค้าใช้จ่ายได้ทุกวันแบบไม่ต้องรอดีลพิเศษ - ธนาคารกสิกรไทย,0.0,neutral,12
-01-Nov-25,07:00:00,โปรบัตรเครดิต | Sizzler ส่วนลด 100 บาท กับ บัตรเครดิตกสิกรไทย - ธนาคารกสิกรไทย,0.0,neutral,13
-09-Oct-25,07:00:00,"บัตรเครดิตกสิกรไทย จัดต่อเนื่องแคมเปญ WORLD CLASS GIFTS จัดโปรฯ พิเศษ ช้อปครบ 8,888 บาท* ได้สิทธิ์ใช้ 8 K Point แลกสินค้าแบรนด์ดัง - ธนาคารกสิกรไทย",0.0,neutral,14
-07-Nov-25,09:03:51,"บัตรเครดิต KBank รายได้ 70,000+ รีวิวบัตรเครดิต อัปเดต 2568 - ธนาคารกสิกรไทย",0.6,positive,15
-01-Oct-25,07:00:00,STARBUCKS รับเครดิตเงินคืนสูงสุด 24% กับ บัตรเครดิตกสิกรไทย* - ธนาคารกสิกรไทย,0.0,neutral,16
-17-Nov-25,11:35:00,SET x KBANK เชิญชวนซื้อสินค้าช่วยสังคมมากกว่า 163 รายการ บน K PLUS - ThaiPublica,0.4,positive,17
-25-Sep-25,07:00:00,กสิกรไทย ร่วมมือ เอ็มทีเอส โกล์ด (แม่ทองสุก) เปิดตัวฟีเจอร์ใหม่ ออมทองด้วยสกุลเงินบาทผ่านแอปพลิเคชันธนาคารได้เป็นที่แรก ให้ลูกค้าออมง่ายไปได้อีกผ่าน K PLUS - ธนาคารกสิกรไทย,0.0,neutral,18
-25-Nov-25,08:55:36,KBANK ร่วมเวที COP30 ตอกย้ำผู้นำการเงินเพื่อสิ่งแวดล้อม - facebook.com,0.0,neutral,19
-12-Jun-25,08:32:41,Q-money บริการเงินอิเล็กทรอนิกส์ Blockchain - ธนาคารกสิกรไทย,0.0,neutral,20
+27-Nov-25,06:43:00,บัตรเครดิต KBank PLUSTINUM พลัสความคุ้ม กิน-เที่ยว-ช้อป ในงาน THE POWER OF PLUS - ThaiPR.NET,0.0,neutral,13
+10-Nov-25,11:04:29,"บัตรเครดิต KBank เงินเดือน 15,000 รีวิว 4 บัตรน่าใช้ อัปเดต 2568 - ธนาคารกสิกรไทย",0.0,neutral,14
+26-Nov-25,10:30:00,"“KBank, Orbix Tech & StraitsX launch on-chain travel payments project” - AEC10NEWS",0.0,neutral,15
+21-Nov-25,08:00:00,"KBANK จับมือ คาราบาวกรุ๊ป จัดตั้งบริษัท KBAO ปล่อยกู้กลุ่มคนฐานราก ผ่านร้าน ""ถูกดี"" - Marketeer Online",0.8,positive,16
+24-Nov-25,03:12:00,KBank ชูภาพอนาคต Digital Money บนเวทีนานาชาติ ย้ำบทบาทการเงินยุคใหม่ต้องโปร่งใส ปลอดภัย และเชื่อมต่อได้ทุกระบบ - ThaiPR.NET,0.0,neutral,17
+09-Oct-25,07:00:00,"บัตรเครดิตกสิกรไทย จัดต่อเนื่องแคมเปญ WORLD CLASS GIFTS จัดโปรฯ พิเศษ ช้อปครบ 8,888 บาท* ได้สิทธิ์ใช้ 8 K Point แลกสินค้าแบรนด์ดัง - ธนาคารกสิกรไทย",0.0,neutral,18
+01-Nov-25,07:00:00,โปรบัตรเครดิต | Sizzler ส่วนลด 100 บาท กับ บัตรเครดิตกสิกรไทย - ธนาคารกสิกรไทย,0.0,neutral,19
+01-Oct-25,07:00:00,STARBUCKS รับเครดิตเงินคืนสูงสุด 24% กับ บัตรเครดิตกสิกรไทย* - ธนาคารกสิกรไทย,0.0,neutral,20

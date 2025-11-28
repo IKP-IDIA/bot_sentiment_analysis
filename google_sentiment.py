@@ -259,7 +259,7 @@ def main(ticker):
         "Negative"
     )
 
-    API_ENDPOINT = "http://127.0.0.1:8000/api/sentiment" 
+    API_ENDPOINT = "http://127.0.0.1:8001/api/sentiment" 
 
     json_payload = {
         "analysis_id": str(uuid.uuid4()), # ใช้ uuid ที่ import มา
@@ -287,7 +287,7 @@ def main(ticker):
     print(json.dumps(api_response, indent=4))
 
     # Plot sentiments including average
-    plot_sentiment(df, ticker, avg_sentiment)
+    # plot_sentiment(df, ticker, avg_sentiment)
 
     return df
 
